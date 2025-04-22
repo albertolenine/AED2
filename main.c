@@ -48,7 +48,15 @@ int main(int argc, char *argv[]) {
         collisions[i].record2->collisionSize = collisions[i].collisionSize;
     }
     
-    // Aqui você pode adicionar código para salvar os registros atualizados em um novo arquivo CSV
+    // Gera o nome do arquivo de saída
+    char outputFilename[256];
+    strncpy(outputFilename, argv[1], sizeof(outputFilename));
+    char *dot = strrchr(outputFilename, '.');
+    if (dot != NULL) *dot = '\0'; // Remove a extensão se existir
+    strcat(outputFilename, "_com_colisoes.csv");
+    
+    // Salva os registros atualizados em um novo arquivo CSV
+    saveUpdatedCSV(outputFilename, records, numRecords);
     
     free(collisions);
     free(records);
