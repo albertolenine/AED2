@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-/*
+#include <C:\SI\AED2\AED2\dataStructure.c>
+
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         printf("Uso: %s <arquivo.csv>\n", argv[0]);
@@ -54,4 +55,3 @@ int main(int argc, char *argv[]) {
     
     return EXIT_SUCCESS;
 }
-    */
